@@ -257,7 +257,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 
                 if len(button) != 2:
                     markup = [[InlineKeyboardButton(f'• sᴇᴛ ᴄʜᴀɴɴᴇʟ ʙᴜᴛᴛᴏɴ •', callback_data='setcb')]]
-                    return await set_msg.reply("<b>ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴠᴀʟɪᴅ ᴀʀɢᴜᴍᴇɴᴛs.\nFᴏʀ ᴇxᴀᴍᴘʟᴇ:\n<blockquote><code>• ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ • - https://t.me/ANIME_RAVEN</code></blockquote>\n\n<i>ᴛʀʏ ᴀɢᴀɪɴ ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ..</i></b>", reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview = True)
+                    return await set_msg.reply("<b>ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴠᴀʟɪᴅ ᴀʀɢᴜᴍᴇɴᴛs.\nғᴏʀ ᴇxᴀᴍᴘʟᴇ:\n<blockquote><code>• ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ • - https://t.me/Anime_Multiverse_Hindi</code></blockquote>\n\n<i>ᴛʀʏ ᴀɢᴀɪɴ ʙʏ ᴄʟɪᴄᴋɪɴɢ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ..</i></b>", reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview = True)
                 
                 button_name = button[0].strip(); button_link = button[1].strip()
                 button_preview = [[InlineKeyboardButton(text=button_name, url=button_link)]]
@@ -267,7 +267,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 return
             except Exception as e:
                 try:
-                    await set_msg.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote>Rᴇᴀsᴏɴ:</b> {e}</blockquote>")
+                    await set_msg.reply(f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>")
                     print(f"! Error Occured on callback data = 'setcb' : {e}")
                 except:
                     await client.send_message(id, text=f"<b>! ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ..\n<blockquote><i>ʀᴇᴀsᴏɴ: 1 minute Time out ..</i></b></blockquote>", disable_notification=True)
